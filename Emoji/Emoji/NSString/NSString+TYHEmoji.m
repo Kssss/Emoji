@@ -51,12 +51,13 @@ static NSDictionary * s_cheatCodesToUnicode = nil;
 + (void)initializeEmojiCheatCodes
 {
     NSDictionary * forwardMap = EMOJI_ChangeText;
-    NSMutableDictionary *reversedMap = [NSMutableDictionary dictionaryWithCapacity:[forwardMap count]];
+   __block NSMutableDictionary *reversedMap = [NSMutableDictionary dictionaryWithCapacity:[forwardMap count]];
     [forwardMap enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
         if ([obj isKindOfClass:[NSArray class]]) {
             for (NSString *object in obj) {
                 [reversedMap setObject:key forKey:object];
             }
+        }else{
             [reversedMap setObject:key forKey:obj];
         }
     }];
