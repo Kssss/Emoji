@@ -8,10 +8,8 @@ emoji表情转换方案
 ## Emoji最终效果
 -------------------
 * 调用NSString+TYHEmoji分类；
-* //&#x1f602 ----->\U0001F604  
-- (NSString *)stringByReplacingEmojiCheatCodesToUnicode
-* //\U0001F604 -----> &#x1F602
-- (NSString *)stringByReplacingEmojiUnicodeToCheatCodes
+* //&#x1f602 ----->\U0001F604  - (NSString *)stringByReplacingEmojiCheatCodesToUnicode
+* //\U0001F604 -----> &#x1F602 - (NSString *)stringByReplacingEmojiUnicodeToCheatCodes
 
 如下图所示：
 
